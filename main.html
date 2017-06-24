@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>	
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<title>Note Maker</title>
+	<style>
+		*{
+			border:0;
+			margin: 0;
+		}
+		body{
+		background-color: #ffffcc;
+		}
+		#createButtonNew{
+			position: fixed;
+			bottom: 2vh;
+			right: 2vw;
+			font-size: 8vw;
+		}
+
+		#sortButton{
+			position: fixed;
+			right: 3vw;
+			bottom: 20vh;
+			font-size: 8vw;
+		}
+
+		#createButtonNew:hover::before{
+			text-shadow: 5px 5px 5px #888;
+		}
+		#sortButton:hover::before{
+			text-shadow: 5px 5px 5px #888;
+		}
+		#welc0me{
+			position: absolute;
+			font-size: 5vw;
+			left: 15vw;
+			top: 40vh;
+			font-family: 'Indie Flower', cursive;
+		}
+		#Enter{
+			position: fixed;
+			width: 30vw;
+			height: 30vw;
+			top: 20vh;
+			border-radius: 5px;
+			box-shadow: 5px 5px 5px #888;
+			left: 32vw;
+			background-color: white;
+		}
+		#showId{
+			position: relative;
+			top: 30px;
+			height: 40px;
+			border-left: 5px solid red;
+			font-family: 'Roboto', sans-serif;
+			font-size: 25px;
+			font-weight: bold;
+			color: red;
+			cursor: default;
+		}
+		#IdText{
+			position: relative;
+			left: 10%;
+			top: 20%;
+		}
+		#enterNoteId{
+			position: relative;
+			display: inline-block;
+			margin-top: 70px;
+			margin-bottom: 40px;
+			margin-left: 40px;
+			margin-right: 40px;
+			border: 0;
+			resize: none;
+			width: 80%;
+			height: 8%;
+			font-family: 'Roboto', sans-serif;
+			font-size: 150%;
+			border-bottom: 1px solid #ccc;
+		}
+		#enterNoteId:focus{
+			outline-width: 0;
+			border-bottom: 1px solid black;
+		}
+		#enterNote{
+			display: inline-block;
+			width: 80%;
+			margin-left: 40px;
+			margin-right: 40px;
+			font-size: 150%;
+			font-family: 'Roboto', sans-serif;
+			border-bottom: 1px solid #ccc;
+			resize: none;
+			overflow: visible;
+			min-height: 60px;
+		}
+		#enterNote:focus{
+			outline-width: 0;
+			border-bottom: 1px solid black
+		}
+		#submitButton{
+			background-color: white;
+			margin-top: 3%;
+			padding-left: 20px;
+			border: 3px solid #ccc;
+			font-family: 'Roboto', sans-serif;
+			font-size: 150%;
+			font-weight: bold;
+			color: #aaa;
+			margin-left: 35%;
+			width: 100px;
+			height: 40px;
+		}
+		#submitButton:hover{
+			outline-width: 0;
+			color: purple;
+			border: 3px solid purple;
+			cursor: default;
+		}
+		#CheckThis{
+			position: fixed;
+			font-size: 100px;
+			left: 59%;
+			top: 12%;
+			text-shadow: 1px 1px 1px #888;
+		}
+		#CheckThis:hover{
+			text-shadow: 3px 3px 3px #888;
+
+		}
+		.Note{
+			display: inline-block;
+			background-image: url('unnamed.jpg');
+			margin: 50px;
+			width: 300px;
+			height: 300px;
+			box-shadow: 4px 4px 4px #888;
+		}
+		.noteId{
+			color: white;
+			display: inline-block;
+			padding-left: 50px;
+			padding-top: 3px;
+		}
+		#editIcon{
+			color: white;
+			float: right;
+			padding: 3px;
+		}
+		#closeIcon{
+			color: white;
+			float: right;
+			padding: 3px;
+		}
+		.actualNote{
+			padding-left:40px;
+			padding-top: 36px;
+		}
+		.noteHead{
+			height: 25px;
+		}
+	</style>
+	</head>
+	<body>
+	<div id="Notes"></div>
+	<div id="Buttons"></div>
+	<script type="text/javascript" src="Notes.js"></script>
+	</body>
+</html>
